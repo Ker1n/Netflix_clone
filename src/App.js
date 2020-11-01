@@ -4,7 +4,6 @@ import {Home, Browse, Signin, Signup} from './pages/index';
 import * as ROUTES from './constants/routes';
 
 
-
 export default function App() {
   return (
       <Router>
