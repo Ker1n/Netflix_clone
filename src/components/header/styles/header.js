@@ -6,6 +6,7 @@ export const Background = styled.div`
   flex-direction: column;
   background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
     no-repeat;
+
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
   }
@@ -121,7 +122,7 @@ export const Dropdown = styled.div`
   background-color: black;
   padding: 10px;
   width: 100px;
-  top: 42px;
+  top: 32px;
   right: 10px;
 
   ${Group}:last-of-type ${Link} {
@@ -192,6 +193,7 @@ export const Text = styled.p`
   font-size: 22px;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  max-width: 660px;
 `;
 
 export const Logo = styled.img`
@@ -224,5 +226,3 @@ export const PlayButton = styled.button`
     color: white;
   }
 `;
-
-
