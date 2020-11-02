@@ -121,7 +121,7 @@ export const Dropdown = styled.div`
   background-color: black;
   padding: 10px;
   width: 100px;
-  top: 32px;
+  top: 42px;
   right: 10px;
 
   ${Group}:last-of-type ${Link} {
@@ -224,3 +224,5 @@ export const PlayButton = styled.button`
     color: white;
   }
 `;
+
+
