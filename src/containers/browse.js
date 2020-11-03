@@ -4,6 +4,9 @@ import {FirebaseContext} from '../context/firebase';
 import {Card, Header, Loading, Player } from '../components'
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
+import { FooterContainer } from '../containers/footer';
+
+
 
 export function BrowseContainer({slides}) {
     const [category, setCategory] = useState('films');
@@ -33,7 +36,7 @@ export function BrowseContainer({slides}) {
     return profile.displayName ? (
         <> {loading ? (<Loading src={user.photoURL} />) : (<Loading.ReleaseBody / >)} 
 
-        <Header src="joker1" dontShowOnSmallViewPort>
+        <Header src="joker1" dontShowOnSmallViewPort >
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
@@ -54,7 +57,7 @@ export function BrowseContainer({slides}) {
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out of Ne</Header.TextLink>
+                  <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out of Netflix</Header.TextLink>
                 </Header.Group>
               </Header.Dropdown>
             </Header.Profile>
@@ -95,6 +98,7 @@ export function BrowseContainer({slides}) {
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
         </> 
 
     ) : (

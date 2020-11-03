@@ -5,6 +5,7 @@ import {  Container, Group, Background, Dropdown, Picture, Link, Search, Profile
    
 
 export default function Header({ bg = true, children, ...restProps }) {
+  
   return bg ? (
     <Background data-testid="header-bg" {...restProps}>
       {children}
@@ -13,6 +14,8 @@ export default function Header({ bg = true, children, ...restProps }) {
     children
   );
 }
+
+
 
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {

@@ -340,6 +340,15 @@ export function seedDatabase(firebase) {
       maturity: '15',
       slug: 'zodiac',
     });
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'test',
+      description:
+        'asdla;skdasldkalsdkasl;dkas;ldkaasdasd',
+      genre: 'suspense',
+      maturity: '15',
+      slug: 'zodiac-test',
+    });
   
     // Children
     firebase.firestore().collection('films').add({
